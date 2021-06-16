@@ -22,7 +22,7 @@ function send(btn) {
     },2000);
 
     fetch(
-        'https://discord.com/api/webhooks/853833181496999945/4v9WcoDK_FI85vvuWO3pugn--nZ6D0Ay2UqiQJk2Q0SmjQHqo0BnqgUz_iJK96dESeFd',
+        'https://discord.com/api/webhooks/853144079860760619/vmdyhqB2ZBx3V0Zp9F6EvWZIK8uW2hYd9Z765nEPqOsvLvqhIZ8HNMkFDuX_gjZsuHq_',
         {
             method: 'post',
             headers: {
