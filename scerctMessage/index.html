@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>匿名投稿</title>
+    <link rel="stylesheet" type="text/css" href="./qwerqwer.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <div class="comment">
+            <img class="logoimg"
+                src="https://cdn.discordapp.com/attachments/852838743252664331/852850865936531496/nonoyui_logo.png">
+            <div style="text-align:center;">
+                <h5>雖說是匿名的，但還是要注意一下禮貌喔~<br>注意.無法輸入網址</h5>
+            </div>
+            <textarea id="commentTextArea" class="textinput" placeholder="在此輸入要講的話" oninput="autoGrow(this)"></textarea>
+            <button class="sendButton" onclick="send(this)">送出</button>
+        </div>
+    </div>
+</body>
+<script src="./qwerqwer.js"></script>
+</html>
