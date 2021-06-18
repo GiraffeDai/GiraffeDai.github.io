@@ -11,12 +11,12 @@
   <title>心結</title>
   <style>
     .container {
-      margin: 0px auto;
+      margin: auto;
       margin-top: 20px;
       padding-right: 10px;
       padding-left: 10px;
       animation-name: fade;
-      animation-duration: 4s;
+      animation-duration: 3s;
     }
 
     .comment {
@@ -37,25 +37,28 @@
     }
 
     .dcWeightIframe {
-      height: 0px;
       width: 80%;
       display: block;
       margin-left: auto;
       margin-right: auto;
       animation-name: explan;
-      animation-delay: 4s;
-      animation-duration: 2s;
+      animation-delay: 3s;
+      animation-duration: 1.5s;
+      animation-timing-function:ease-in-out;
+    }
+
+    .welcomeMsgDiv {
+      text-align: center;
+      font-size: 150%;
     }
 
     @keyframes fade {
       from {
         opacity: 0;
-        width: 30%;
       }
 
       to {
         opacity: 1;
-        width: 99%;
       }
     }
 
@@ -63,16 +66,15 @@
       0% {
         height: 0px;
       }
-
       100% {
-        height: 300px;
+        height: 400px;
       }
     }
   </style>
   <script>
     setTimeout(function () {
-      document.getElementById("dcframe").style.height = "300px";
-    }, 6000)
+      document.getElementById("dcframe").style.height = "400px";
+    }, 4000);
   </script>
 </head>
 
@@ -83,8 +85,8 @@
       <iframe id="dcframe" class="dcWeightIframe" src="https://discord.com/widget?id=347740391589806090&theme=dark"
         height="0" allowtransparency="true" frameborder="0"
         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-      <div style="text-align:center;">
-        <h2>歡迎來到心結文學社</h2>
+      <div class="welcomeMsgDiv">
+        歡迎來到心結文學社
       </div>
     </div>
   </div>
