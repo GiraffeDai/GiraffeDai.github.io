@@ -47,7 +47,7 @@ ul {
 
 li {
   position: relative;
-  display: block;
+  display: none;
   margin-bottom: 5px;
   text-transform: uppercase;
   animation-fill-mode: both;
