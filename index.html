@@ -2,95 +2,42 @@
 <html>
 
 <head>
+  <title>心結文學社</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://koyuisha.com/">
   <meta property="og:title" content="心結文學社">
   <meta property="og:description" content="歡迎來到心結文學社">
   <meta property="og:image" content="https://koyuisha.com/logo.png">
-  <title>心結文學社</title>
   <link rel="shortcut icon" href="https://koyuisha.com/logo_icon.png" type="image/png">
-  <style>
-    .container {
-      margin: auto;
-      margin-top: 20px;
-      padding-right: 10px;
-      padding-left: 10px;
-      animation-name: fade;
-      animation-duration: 3s;
-    }
 
-    .comment {
-      float: left;
-      width: 100%;
-      height: auto;
-    }
+  <link rel="stylesheet" type="text/css" href="./main.css"/>
+  <script src="./main.js"></script>
 
-    .commenter {
-      float: left;
-    }
-
-    .logoimg {
-      width: 80%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .dcWeightIframe {
-      width: 80%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      animation-name: explan;
-      animation-delay: 3s;
-      animation-duration: 1.5s;
-      animation-timing-function:ease-in-out;
-    }
-
-    .welcomeMsgDiv {
-      text-align: center;
-      font-size: 150%;
-    }
-
-    @keyframes fade {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes explan {
-      0% {
-        height: 0px;
-      }
-      100% {
-        height: 400px;
-      }
-    }
-  </style>
-  <script>
-    setTimeout(function () {
-      document.getElementById("dcframe").style.height = "400px";
-    }, 4000);
-  </script>
 </head>
 
 <body>
   <div class="container">
+    <button class="menuButton" onclick="menuClick()">三</button>
+    <div id="menu" class="menu">
+      <ul id="menu_ul">
+        <li>
+          <a class="linkcell" href="https://koyuisha.com/kyaruDinner/">凱留晚餐</a>
+        </li>
+        <li>
+          <a class="linkcell" href="https://koyuisha.com/simplyLottery/">簡易抽獎</a>
+        </li>
+      </ul>
+    </div>
     <div class="comment">
       <img class="logoimg" src="https://koyuisha.com/logo.png">
       <iframe id="dcframe" class="dcWeightIframe" src="https://discord.com/widget?id=347740391589806090&theme=dark"
-        height="0" allowtransparency="true" frameborder="0"
-        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-      <div class="welcomeMsgDiv">
+        height="0" allowtransparency="true" frameborder="0"></iframe>
+      <div style="text-align: center;font-size: 150%;">
         歡迎來到心結文學社
       </div>
     </div>
   </div>
 </body>
-
 </html>
