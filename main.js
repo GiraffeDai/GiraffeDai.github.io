@@ -5,16 +5,25 @@ setTimeout(function () {
 var isMenuOpen = false;
 function menuClick() {
     var lis = document.getElementsByTagName("li");
-    for (var i = 0; i < lis.length; i++) {
+    for (let i = 0; i < lis.length; i++) {
         var l = lis[i];
         var sec = 0.1 * (i + 1);
         if (isMenuOpen) {
             l.style.animation = "liFadeOut " + sec + "s linear 1";
             l.style.opacity = 0;
+            linone(l);
         } else {
             l.style.animation = "liFadeIn " + sec + "s linear 1";
             l.style.opacity = 1;
+            l.style.display = "block";
         }
     }
     isMenuOpen = !isMenuOpen;
 }
+
+function linone(li){
+    setTimeout(function(){
+        li.style.display = "none";
+    },500);
+}
+
