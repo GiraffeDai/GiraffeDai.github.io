@@ -1,0 +1,127 @@
+.container {
+  margin: auto;
+  margin-top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+.comment {
+  float: left;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  position: absolute;
+}
+
+.menu {
+  float: left;
+  margin: auto;
+  height: 0px;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  padding-right: 10px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  background-color:rgb(39, 132, 190);
+  color:white;
+  font-size: 20px;
+  font-weight: bold;
+  width: fit-content;
+  min-width: 120px;
+  height: 40px;
+  margin-top: 10px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  margin-left: -35px;
+}
+
+li {
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+.menuButton {
+  font-size: 150%;
+  background-color: white;
+  border: white;
+  font-weight: bold;
+}
+
+.logoimg {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dcWeightIframe {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: explan;
+  animation-delay: 3s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes explan {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 400px;
+  }
+}
+
+@keyframes liFadeIn{
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes liFadeOut{
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    top: 100px;
+  }
+}
