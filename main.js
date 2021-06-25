@@ -5,6 +5,10 @@ setTimeout(function () {
 var isMenuOpen = false;
 function menuClick() {
     var lis = document.getElementsByTagName("li");
+    document.getElementsByClassName("menuButton")[0].disabled = true;
+    setTimeout(function(){
+        document.getElementsByClassName("menuButton")[0].disabled = false;
+    },250);
     for (let i = 0; i < lis.length; i++) {
         var l = lis[i];
         var sec = 0.1 * (i + 1);
@@ -24,6 +28,6 @@ function menuClick() {
 function linone(li){
     setTimeout(function(){
         li.style.display = "none";
-    },500);
+    },250);
 }
 
