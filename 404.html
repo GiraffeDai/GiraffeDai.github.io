@@ -1,8 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <script>
-        document.location.href = "https://koyuisha.com";
+        var fragment = document.location.href.split('/').pop();
+        if (fragment.length <= 0) {
+            document.location.href = "https://koyuisha.com/";
+        }
+        var url = 'https://script.google.com/macros/s/AKfycbynE6uw79t5NQ9Da8T97iU4NrBEMuagiPYGu2OEZ6IiChV7aHw/exec?data=["' + fragment + '"]';
+        fetch(url)
+            .then(function (response) {
+                if (response.ok) {
+                    response.json().then(data => {
+                        if (data["isSuccess"] == true && data["urlID"].length > 0) {
+                            document.location.href = data["url"];
+                            return;
+                        }
+                        if (data["isSuccess"] == false) {
+                            document.location.href = "https://koyuisha.com/";
+                            return;
+                        }
+
+                    }).catch(function (error) {
+                        document.location.href = "https://koyuisha.com/";
+                    });
+                }
+            });
     </script>
 </head>
 
