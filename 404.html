@@ -12,7 +12,8 @@
     <meta property="og:image" content="https://koyuisha.com/logo.png">
     <link rel="shortcut icon" href="https://koyuisha.com/logo_icon.png" type="image/png">
     <script>
-        var fragment = document.location.href.split('/').pop();
+        var url = document.location.href.split('?').shift();
+        var fragment = url.split('/').pop();
         if (fragment.length <= 0) {
             document.location.href = "https://koyuisha.com/";
         }
