@@ -39,9 +39,7 @@
     </div>
     <div class="comment">
       <img class="logoimg" src="https://koyuisha.com/logo.png">
-      <div style="display: block;height: 15px;">
-
-      </div>
+      <div style="display: block;height: 15px;"></div>
       <div id="welDivZh" class="welDiv">
         歡迎來到心結文學社
       </div>
@@ -57,18 +55,16 @@
         var welDivZh = document.getElementById('welDivZh');
         var welDivEn = document.getElementById('welDivEn');
         var welDivJa = document.getElementById('welDivJa');
+        welDivEn.style.display = 'none';
+        welDivJa.style.display = 'none';
         const lang = (navigator.language || navigator.browserLanguage).toLowerCase();
         if (lang.indexOf('en') >= 0) {
+          welDivEn.style.display = '';
           welDivZh.style.display = 'none';
-          welDivJa.style.display = 'none';
         }
         if (lang.indexOf('ja') >= 0) {
+          welDivJa.style.display = '';
           welDivZh.style.display = 'none';
-          welDivEn.style.display = 'none';
-        }
-        if (lang.indexOf('zh') >= 0) {
-          welDivJa.style.display = 'none';
-          welDivEn.style.display = 'none';
         }
       </script>
     </div>
