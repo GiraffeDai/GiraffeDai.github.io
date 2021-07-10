@@ -14,10 +14,8 @@
   <meta property="og:description" content="歡迎來到心結文學社">
   <meta property="og:image" content="https://koyuisha.com/logo.png">
   <link rel="shortcut icon" href="https://koyuisha.com/logo_icon.png" type="image/png">
-
-  <link rel="stylesheet" type="text/css" href="./main.css"/>
+  <link rel="stylesheet" type="text/css" href="./main.css" />
   <script src="./main.js"></script>
-
 </head>
 
 <body>
@@ -41,12 +39,40 @@
     </div>
     <div class="comment">
       <img class="logoimg" src="https://koyuisha.com/logo.png">
-      <iframe id="dcframe" class="dcWeightIframe" src="https://discord.com/widget?id=347740391589806090&theme=light"
-        height="0" allowtransparency="true" frameborder="0"></iframe>
-      <div style="text-align: center;font-size: 150%;">
+      <div style="display: block;height: 15px;">
+
+      </div>
+      <div id="welDivZh" class="welDiv">
         歡迎來到心結文學社
       </div>
+      <div id="welDivEn" class="welDiv">
+        Welcome to Knot Literary Society
+      </div>
+      <div id="welDivJa" class="welDiv">
+        ようこそ<a style="font-weight: bold;">ここゆい文学社</a>へ
+      </div>
+      <iframe id="dcframe" class="dcWeightIframe" src="https://discord.com/widget?id=347740391589806090&theme=dark"
+        height="0" allowtransparency="true" frameborder="0"></iframe>
+      <script>
+        var welDivZh = document.getElementById('welDivZh');
+        var welDivEn = document.getElementById('welDivEn');
+        var welDivJa = document.getElementById('welDivJa');
+        const lang = (navigator.language || navigator.browserLanguage).toLowerCase();
+        if (lang.indexOf('en') >= 0) {
+          welDivZh.style.display = 'none';
+          welDivJa.style.display = 'none';
+        }
+        if (lang.indexOf('ja') >= 0) {
+          welDivZh.style.display = 'none';
+          welDivEn.style.display = 'none';
+        }
+        if (lang.indexOf('zh') >= 0) {
+          welDivJa.style.display = 'none';
+          welDivEn.style.display = 'none';
+        }
+      </script>
     </div>
   </div>
 </body>
+
 </html>
